@@ -11,30 +11,35 @@
 
 \section{Introduction}
 
-\section{Fitness Apps}
-
 In recent years an increasing number of fitness applications has become available across the various mobile platforms, such as Android and Apple's iOS.
 These applications often collect a lot of data that many people consider sensitive, from behavioural data like how often one exercises and how much someone eats, to bodily characteristics such as weight, age and length.
-Some apps even allow to monitor someones heart rate. In this paper I will be considering two apps in further depth.
+Some apps even allow to monitor someones heart rate.
 
-Runkeeper is one such app available both on iPhones and on devices running Android. It allows users to ``track, manage and share all of [their] fitness activities''.\footnote{\emph{Terms of Service}, FitnessKeeper, Inc. \url{https://runkeeper.com/termsofservice/}}
-Runkeeper allows users to record activities, their location, body measurements, weight, nutrition information, wheter they have diabetes and their sugar measurements and information about their sleep habits.\footnote{\emph{Settings -- Sharing}. \url{http://runkeeper.com/settings/sharing}}
+In this paper I will be considering two apps in further depth. First I will describe what data they collect. Next I will apply the framework from European privacy regulations, most notably directive 95/46/EC, to these service providers. Lastly I will describe a Personal Data Management system and apply this to the case of the two apps, observing that while this may fix some issues, some root causes of problems need to be addressed differently.
+
+\section{The fitness apps}
+
+Runkeeper is a fitness and health app available both on iPhones and on devices running Android. It allows users to ``track, manage and share all of [their] fitness activities''.\footnote{\emph{Terms of Service}, FitnessKeeper, Inc. \url{https://runkeeper.com/termsofservice/}}
+Runkeeper allows users to record activities, their location, body measurements, weight, nutrition information, whether they have diabetes and their sugar measurements and information about their sleep habits.\footnote{\emph{Settings -- Sharing}. \url{http://runkeeper.com/settings/sharing}}
 
 Similarly, Fitbit\footnote{\emph{Fitbit}. \url{https://Fitbit.com}} sell a wristband and provide a companion app that allows users to track their steps, activity, heart rate, sleep cycle, location and eating habits.
 Fitbit allows users to export this information to other apps, including to Runkeeper.\footnote{\emph{Fitbit API}. \url{http://dev.Fitbit.com}}
+
+Runkeeper is ad-supported, although you can pay for a premium plan.\footnote{\emph{Runkeeper Elite}. \url{https://runkeeper.com/what-is-elite}}
+Fitbit's business model is based on the sale of hardware.
 
 \section{Legal conditions}
 
 \subsection{Applicable law}
 
-Before we need consider if European privacy laws apply to both of these companies located in the United States of America.
+Firstly, we need consider if European privacy laws apply to both of these companies located in the United States of America.
 When the Dutch privacy protection agency (\emph{College Bescherming Persoonsgegevens}, CBP) was researching popular instant messaging app WhatsApp, which is also based in the United States, they decided that they were competent to investigate the case and that Dutch privacy laws did apply.
 They based this on consideration 20 with the EU Data Protection Directive 95/46/EC and on two opinions by the Article 29 Working Party, one of which I will show below.
 
 Consideration 20 on directive 95/46/EC specifies that \emph{the fact that the processing of data is carried out by a person established in a third country must not stand in the way of the protection of individuals provided for in this Directive; whereas in these cases, the processing should be governed by the law of the Member State in which the means used are located, and there should be guarantees to ensure that the rights and obligations provided for in this Directive are respected in practice}.
 This consideration is further established in article 4 of the directive.
 
-The Article 29 Working Party considered\footnote{\emph{Working document on determining the international application of EU data protection law to personal data processing on the internet by non-EU based web sites}, 30 May 2002, Article 29 Working Party} that ``making use of equiment'' as in article 4 (1) (c) of the directive means that ``such equipment should be at the disposal of the controller, [\ldots] while at the same time it is not necessary that the controller exercise full control over the equipment''.
+The Article 29 Working Party considered\footnote{\emph{Working document on determining the international application of EU data protection law to personal data processing on the internet by non-EU based web sites}, 30 May 2002, Article 29 Working Party} that ``making use of equipment'' as in article 4 (1) (c) of the directive means that ``such equipment should be at the disposal of the controller, [\ldots] while at the same time it is not necessary that the controller exercise full control over the equipment''.
 As the mobile phones run applications with full control over the phone, even though this is limited to when the application is running, I think this article 4 (1) (c) applies and that the app providers do make use of the smartphone as a means of data processing.
 
 These fitness apps should thus adhere to EU privacy law.
@@ -45,16 +50,16 @@ In both these cases there is a significant flow of personal data from the users 
 If we want to view this data in light of the Data Protection Directive\footnote{Directive 95/46/EC}, we must first establish the various roles involved in the processing of this data.
 Article 2 of the directive establishes the roles of the data subject, data controller and the data processor.\footnote{95/46/EC, article 2, sub (a), (d) and (e)}
 
-The data subject is the identifyable person whom the personal data identifies.
+The data subject is the identifiable person whom the personal data identifies.
 In this case this is clearly the user of the Runkeeper or Fitbit applications.
 
-The controller has the capability to deterimine the purposes and the means of the processing of personal data.
+The controller has the capability to determine the purposes and the means of the processing of personal data.
 In the case of these fitness apps, the app provider is the data controller as both of their terms of service grant the provider an virtually unlimited licence to process the provided user data.\footnote{\emph{Fitbit Website Terms and Conditions}. \url{http://www.Fitbit.com/uk/terms}} \footnote{\emph{Runkeeper Terms of Service}. \url{http://runkeeper.com/termsofservice}}
 Runkeeper even goes as far as as not covering voluntarily provided data, which includes most if not all fitness data the users post to the service, by the limitations of the privacy policy.\footnote{\emph{Runkeeper Privacy Policy}. \url{http://runkeeper.com/privacypolicy}} \footnote{After reading this, the author decided to terminate their Runkeeper account.}
 
 The primary data processors in this case would also be the app providers.
 They process the information by providing it on their websites and through their apps.
-Both their privacy policies indicate that they may use other parties for certain parts of the service, but that those parties will not be allowed to further desiminate the information.
+Both their privacy policies indicate that they may use other parties for certain parts of the service, but that those parties will not be allowed to further disseminate the information.
 
 \subsection{Lawful processing}
 
@@ -63,7 +68,7 @@ The second paragraph explains that personal data can only be processed if it is 
 This establishes two criteria for lawful processing of personal data: (i) specificity and (ii) consent (or another legitimate basis defined by law).
 These two criteria have been integrated in the Data Protection Directive (95/46/EC) as articles 6 and 7, respectively.
 
-The data Fitbit and Runkeeper process can be devided in three parts. Both companies do this in their privacy policies and terms of service: they consider data collected for account administration purposes, logged data collected from devices and ``User Generated Data'' (Fitbit) or ``User Content'' (RunKeeper), which are for example activity reports or comments posted on the website.
+The data Fitbit and Runkeeper process can be divided in three parts. Both companies do this in their privacy policies and terms of service: they consider data collected for account administration purposes, logged data collected from devices and ``User Generated Data'' (Fitbit) or ``User Content'' (Runkeeper), which are for example activity reports or comments posted on the website.
 
 The legal basis for the processing of the first kind of data can be found in article 7 (b) of the directive: processing of items like an email address and password is necessary to perform the services for the user.
 This basis is only enough if the data is only processed for these and compatible purposes.
@@ -84,7 +89,7 @@ Even if someone does not have an account and thus supposedly agreed with the Ter
 
 The Data Protection Directive requires that data should be collected for ``specified, explicit and legitimate purposes and not further processed in a way incompatible with those purposes.''\footnote{95/46/EC article 6 (1) (b)}
 This appears not to be the case with Runkeeper.
-Runkeeper has an exclusion clause in its privacy policy, which excludes all ``User Content'', content users voluntarily submit to the service, from the protections the pivacy policy gives.
+Runkeeper has an exclusion clause in its privacy policy, which excludes all ``User Content'', content users voluntarily submit to the service, from the protections the privacy policy gives.
 Runkeeper states such information ``shall be deemed to be non-confidential and we shall be free to reproduce, use, disclose and distribute such Unsollicited information to others without limitation or attribution''.\footnote{\emph{Runkeeper Privacy Policy}. \url{http://runkeeper.com/privacypolicy}}
 The terms of service allow Runkeeper to do virtually anything with any part of this information unlimitedly.
 This unlimitedness makes the purposes unspecified and thus makes the collection of data unlawful. Having user consent does not legitimise this, because article 6 and 7 of the directive are cumulative and must both be met simultaneously.\footnote{\emph{Opinion 03/2013 on purpose limitation}, 2 April 2013, Article 29 Working Party.}
@@ -94,7 +99,7 @@ Fitbit allow users to select with whom they want to share certain data and they 
 Data you mark to be shared publicly however means, according to their terms of service, that ``you hereby waive any rights of publicity and privacy with respect to the User Generated Content and any other legal or moral rights that might preclude Fitbit's use of the User Generated Content or require your permission for Fitbit to use the User Generated Content.''\footnote{\emph{User-Generated Content, Fitbit Website Terms of Service}. \url{http://www.Fitbit.com/uk/terms}}
 Fitbit also, like Runkeeper, claims that by providing user-generated content users grant Fitbit a virtually unlimited licence to do whatever they like.
 
-In conclustion, it seems that neither Fitbit or Runkeeper respect the specificity-requirement of directive 95/46/EC.
+In conclusion, it seems that neither Fitbit or Runkeeper respect the specificity-requirement of directive 95/46/EC.
 
 \subsection{Article 8}
 
@@ -102,24 +107,71 @@ A special consideration needs to be made for the information processed by these 
 These apps for instance process weight, body measurements or heart rate information.
 Runkeeper may also track if someone is diabetic.
 95/46/EC Article 8 (1) prohibits the processing of certain special categories of data, including medical data.
-In this case this processing would only be allowed if the user has made the data either publicly available (for which both apps provide means) or based on explicit consent.\footnote{95/46/EC Article 8 (2) (e) and (a) respectively}
+In this case this processing would only be allowed if the user has made the data either publicly available (for which both apps provide means) or based on explicit consent.\footnote{95/46/EC Article 8 (2) (e) and (a),respectively}
 If the user marks this information as public when shared through the Runkeeper or Fitbit apps, we can consider article 8 satisfied.
 If we however decide article 8 (1) does not apply because of explicit consent, we can again apply the criteria as described in the previous section and find that the consent is not adequate.
 
-\section{PDM $\oplus$ profile transparancy tool}
+\section{Personal Data Management}
 
+Both of these described applications are trusted with a lot of data.
+Many users desire more control over their data.
+One proposed solution to this problem has been the introduction of personal data management (PDM) systems.
+In a PDM-centred design, personal data is stored inside a protected system.
+This system, which can be viewed as a vault, allows a user to granularily select what data a service provider gets to access and when this may happen.
+This way the user stays in control.
 
-\subsection{design}
+\subsection{Design}
 
-\subsection{answers}
+In order to exercise full control over their data, the data controller and the data subject should be the same person as much as possible.
+This means that at least the PDM ``vault'' should be set up so that the data subject remains in control.
+Technical enforcement of this requirement can be provided if they completely host and control the data and the application themselves.
+This could for instance be achieved by running an Open Source application on a server they host themselves or in the context of Smart Phones, an app that stores all the data locally.
+The requirement can of course also be met by means of contracting some kind of service provider, where the contract is set up in such a way that the data subject retains control of his or her information.
+The service provider would then be a processor: the data controller and data processor do not necessarily need to overlap.\footnote{95/46/EC Article 2}
 
-Which legal problems are solved
+Having established this centralised store of the user's data, we will now need to facilitate accessing that data.
+Without access to the data, services will not be able to provide as much added value for the users.
+After all, this added data was the reason why users started providing this much personal data in the first place.
+Services should be able to request data from the PDM-service in a way that immediately satisfies the requirements set by the Data Protection Directive in article 7 (1) (a) and article 6.
+The requests should contain the specific goals for which the data is requested and exactly what data is requested.
+The user should then be able to freely allow or deny sharing the requested information.
+This way the requirements specified by the Article 29 Working Party, namely that the consent is given freely, for a specific purpose and that consent was given while the user was fully informed. \footnote{\emph{Opinion 15/2011 on the definition of consent}, 13 July 2011, Article 29 Working Party}
 
-Which legal problems are not solved.
+While the other bases for consent might be included in this system, I do not think they should be.
+If the PDM service would voluntarily disclose information if a service provider requests it, for instance while claiming they need it for fulfilment of a contract, the user would lose quite a bit of control.
+An automated system can poorly audit the legitimacy of such requests and in current models that data is actively requested from data subjects as well: e.g. an online retailer requesting address information because they need it for shipping purposes.
 
-which new problems are created by this design.
+\subsection{Application}
+
+If we apply the described PDM design to the case of the fitness apps, we can come up with a centralised data storage for fitness apps.
+Both Apple and Google already provide such APIs to encourage data exchange between ``health apps''.\footnote{\emph{Google Fit}, \url{https://developers.google.com/fit/}} \footnote{\emph{iOS 8 -- Health} \url{https://www.apple.com/ios/whats-new/health/}} \footnote{Interestingly, while Apple does note that ``The information you share about yourself is yours to use and share'', Google mentions nothing about security or control.}
+We should then submit our fitness activity records not to the app service providers, but to the PDM ``vault''.
+The fitness apps should then be able to access that information based on given consent.
+Because the apps need to specify for what goals they want to use the data, the user will be fully aware for what purposes he is releasing this information.
+
+It is important that apps using the PDM framework commit to it and do not just specify they want to do anything.
+This is a weakness of the PDM system.
+If users are blackmailed into releasing all their data because they are otherwise excluded from using the service, the user is not truly able to give his consent freely.
+While this may not be a big issue for a dime-a-dozen fitness application, this can become a bigger issue when we consider social networks: ``everyone is on Facebook''.
+
+A poor commitment to privacy is also not solved by the described PDM architecture.
+As shown, the terms of service and privacy policies of the described fitness apps are not very privacy-friendly.
+The amount of unlimited consent the apps ask for should be considered rather problematic.
+Even if the data is initially gained fairly, if the company then claims to practically own the data based on its terms of service, not much is gained by the PDM infrastructure.
+After all, in these examples, most of the data had been volunteered by the users in the first place.
+
 
 \section{Conclusions}
+
+I reviewed two fitness apps, Runkeeper and Fitbit.
+I showed that both of these applications process a lot of data, some of which an be considered rather sensitive.
+I then showed that although Runkeeper and Fitbit originate in the United States, both apps (also) have to be considered under European privacy regulations.
+Next was shown how these apps fit in the framework of directive 95/46/EC, the Data Directive.
+Reviewing the terms of service and privacy policies used by the two companies led to the conclusion that both of them allowed themselves to do virtually anything with something they call ``volunteered data''.
+Because this data still is privacy sensitive, this means their collection has no clearly specified purpose and is thus unlawful, even with consent.
+
+I then briefly described the idea of Personal Data Management (PDM) systems and how one such PDM might function.
+Applying that PDM to the cases of Fitbit and Runkeeper, I observed that while they may solve some issues with consent, these companies will need to amend their practice of not limiting their processing before any real problems are solved.
 
 \end{document}
 
